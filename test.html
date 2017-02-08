@@ -1,0 +1,14 @@
+<script src="http://145.24.222.173:8000/socket.io/socket.io.js"></script>
+<script>
+    var socket = io.connect('http://145.24.222.173:8000');
+
+    socket.on('auth', function(bool)
+    {
+        if(bool)
+            console.log("You are authenticated!");
+        else
+            console.log("Nope, nerd!");
+    });
+
+    socket.emit('auth', 'X9nzoy80iD1oM0f6bHE7n9yqLsN9fhsrCj2lCam39pHFHGN37MzqAe9r8Wy4Q1PA4pyMEBsgE8g12hpgTDOIwzLIjNEKNZqlgpg1J9lSL9ssvZAlKKIHSGzrGfUkevaw');
+</script>
